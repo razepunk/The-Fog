@@ -1,13 +1,12 @@
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import java.io.File;
-import java.net.URL;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.concurrent.ThreadLocalRandom;
 
 
@@ -26,14 +25,14 @@ public class theFog {
 
 
         try {
-            URL defaultSound = theFog.class.getResource("creepy.wav");
-            File soundFile = new File(defaultSound.toURI());
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(soundFile);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioInputStream);
-            clip.start( );
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            // get the sound file as a resource out of my jar file;
+            // the sound file must be in the same directory as this class file.
+            // the input stream portion of this recipe comes from a javaworld.com article.
+            InputStream inputStream = theFog.class.getResourceAsStream("creepy.wav");
+            AudioStream audioStream = new AudioStream(inputStream);
+            AudioPlayer.player.start(audioStream);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
 
@@ -41,14 +40,14 @@ public class theFog {
         Thread.sleep(3333);
 
         try {
-            URL defaultSound = theFog.class.getResource("beat.wav");
-            File soundFile = new File(defaultSound.toURI());
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(soundFile);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioInputStream);
-            clip.start( );
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            // get the sound file as a resource out of my jar file;
+            // the sound file must be in the same directory as this class file.
+            // the input stream portion of this recipe comes from a javaworld.com article.
+            InputStream inputStream = theFog.class.getResourceAsStream("beat.wav");
+            AudioStream audioStream = new AudioStream(inputStream);
+            AudioPlayer.player.start(audioStream);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
 
@@ -65,14 +64,14 @@ public class theFog {
                 iconFog);
 
         try {
-            URL defaultSound = theFog.class.getResource("hum.wav");
-            File soundFile = new File(defaultSound.toURI());
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(soundFile);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioInputStream);
-            clip.start( );
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            // get the sound file as a resource out of my jar file;
+            // the sound file must be in the same directory as this class file.
+            // the input stream portion of this recipe comes from a javaworld.com article.
+            InputStream inputStream = theFog.class.getResourceAsStream("hum.wav");
+            AudioStream audioStream = new AudioStream(inputStream);
+            AudioPlayer.player.start(audioStream);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
 
@@ -115,17 +114,17 @@ public class theFog {
         }
 
         if (weapon1.equalsIgnoreCase("Axe")) {
-            try {
-                URL defaultSound = theFog.class.getResource("axe.wav");
-                File soundFile = new File(defaultSound.toURI());
-                AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(soundFile);
-                Clip clip = AudioSystem.getClip();
-                clip.open(audioInputStream);
-                clip.start( );
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
 
+            try {
+                // get the sound file as a resource out of my jar file;
+                // the sound file must be in the same directory as this class file.
+                // the input stream portion of this recipe comes from a javaworld.com article.
+                InputStream inputStream = theFog.class.getResourceAsStream("axe.wav");
+                AudioStream audioStream = new AudioStream(inputStream);
+                AudioPlayer.player.start(audioStream);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             try {
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
@@ -142,14 +141,14 @@ public class theFog {
             JOptionPane.showMessageDialog(null, "OK " + name + " since you have the AXE you can smash through doors.");
         } else if (weapon1.equalsIgnoreCase("Sword")) {
             try {
-                URL defaultSound = theFog.class.getResource("sword.wav");
-                File soundFile = new File(defaultSound.toURI());
-                AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(soundFile);
-                Clip clip = AudioSystem.getClip();
-                clip.open(audioInputStream);
-                clip.start( );
-            } catch (Exception ex) {
-                ex.printStackTrace();
+                // get the sound file as a resource out of my jar file;
+                // the sound file must be in the same directory as this class file.
+                // the input stream portion of this recipe comes from a javaworld.com article.
+                InputStream inputStream = theFog.class.getResourceAsStream("sword.wav");
+                AudioStream audioStream = new AudioStream(inputStream);
+                AudioPlayer.player.start(audioStream);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
             try {
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
