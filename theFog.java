@@ -211,10 +211,6 @@ public class theFog {
 
             JOptionPane.showMessageDialog(null, "You trudge into the swamp\n"
                     + "your feet are soaked to the bone.");
-
-
-            JOptionPane.showMessageDialog(null, "You trudge into the swamp\n"
-                    + "your feet are soaked to the bone.");
             JOptionPane.showMessageDialog(null, "As you wade deeper and deeper\n" +
                     "you approach the hermits hut.");
             JOptionPane.showMessageDialog(null, "Discovering the hut in the center of\n" +
@@ -231,11 +227,11 @@ public class theFog {
             do {
 
 
-                action1 = JOptionPane.showInputDialog("Type THANK to express gratitude");
+                action1 = JOptionPane.showInputDialog("Type THANKS to express gratitude");
             }
-            while (!action1.equalsIgnoreCase("Thank"));
+            while (!action1.equalsIgnoreCase("Thanks"));
 
-            if (!action1.equalsIgnoreCase("Thank")) {
+            if (!action1.equalsIgnoreCase("Thanks")) {
                 JOptionPane.showMessageDialog(null, "'Thank you kind hermit!'");
 
             }
@@ -520,7 +516,7 @@ public class theFog {
 
             }
             JOptionPane.showMessageDialog(null, "'That was well done', says the wizard.");
-            JOptionPane.showMessageDialog(null, "'You should be off to find the crystal of time.'");
+            JOptionPane.showMessageDialog(null, "'You should be off to your quest.'");
             JOptionPane.showMessageDialog(null, "'I am finished here with you.'");
             JOptionPane.showMessageDialog(null, "The wizard disappears, flames erupting again over the rock.");
             JOptionPane.showMessageDialog(null, doggo + " wags her tail and you continue on.");
@@ -591,7 +587,7 @@ public class theFog {
             }
             while (!attack0.equalsIgnoreCase("Cast") && !attack0.equalsIgnoreCase("Attack"));
 
-            if (attack.equalsIgnoreCase("Cast")) {
+            if (attack0.equalsIgnoreCase("Cast")) {
 
                 if (element.equalsIgnoreCase("Earth")) {
                     JOptionPane.showMessageDialog(null, "Earth rumbling, you hold\n" +
@@ -617,7 +613,7 @@ public class theFog {
                             "The man was impaled on a branch through his chest.");
                 }
 
-            } else if (attack.equalsIgnoreCase("Attack")) {
+            } else if (attack0.equalsIgnoreCase("Attack")) {
                 if (weapon1.equalsIgnoreCase("Axe")) {
                     JOptionPane.showMessageDialog(null, "Full force you bring the AXE down on the mans head.");
                     JOptionPane.showMessageDialog(null, "The weight of the AXE forces it all the way down.");
@@ -732,8 +728,9 @@ public class theFog {
 
                   }
                   while (!actof2.equalsIgnoreCase("Kneel") && !actof2.equalsIgnoreCase("Stand"));
-            String quest = null;
 
+
+            String quest = null;
             if (actof2.equalsIgnoreCase("Kneel")) {
                 JOptionPane.showMessageDialog(null, "You kneel before Øystein.");
                 JOptionPane.showMessageDialog(null, "'Greetings friend!' Øystein bellows.");
@@ -742,73 +739,107 @@ public class theFog {
                             "of mine good to see it again.");
                 }
                 if (elementQ.equalsIgnoreCase("I am looking for the crystal of time.")) {
-                    JOptionPane.showMessageDialog(null, "I know where the crystal of time is\n" +
+                    JOptionPane.showMessageDialog(null, "I know where the Crystal of Time is\n" +
                             "I will give you a map that will take you there.");
                     JOptionPane.showMessageDialog(null, "Øystein hands you a map, you put it in your satchel.");
-                    JOptionPane.showMessageDialog(null, "'You should be on your way.'");
+                    JOptionPane.showMessageDialog(null, "'The Crystal of Time is a powerful object you see.' Øystein says.");
+                    JOptionPane.showMessageDialog(null, "'Take care when using it.' Øystein says.");
+                    JOptionPane.showMessageDialog(null, "'You should be on your way, take your dog.'");
 
-                    quest = "Crystal";
+                    quest = "CrystalM";
                 } else if (elementQ.equalsIgnoreCase("I am looking to destroy the Winter Queen.")) {
-                    JOptionPane.showMessageDialog(null, "Øystein says 'I have ties with the winter queen you will be on your own.'");
-                    JOptionPane.showMessageDialog(null, "'You should be on your way.'");
+                    JOptionPane.showMessageDialog(null, "Øystein says 'I have ties with the Winter Queen you will be on your own.'");
+                    JOptionPane.showMessageDialog(null, "'You should be on your way, take your dog.'");
                     quest = "Winter";
                 }
-                if (elementQ1.equalsIgnoreCase("I am looking for the crystal of time.")) {
-                    JOptionPane.showMessageDialog(null, "'You are rude to my soldier!' Øystein snaps.");
-                    JOptionPane.showMessageDialog(null, "I know where the crystal of time is\n" +
-                            "I will give you a map that will take you there even though I should not.");
-                    JOptionPane.showMessageDialog(null, "Øystein hands you a map, you put it in your satchel.");
-                    JOptionPane.showMessageDialog(null, "'You should be on your way.'");
-                    quest = "Crystal";
-                }
-                else if (elementQ1.equalsIgnoreCase("I am looking to destroy the Winter Queen.")) {
-                    JOptionPane.showMessageDialog(null, "'You are rude to my soldier!' Øystein snaps.");
-                    JOptionPane.showMessageDialog(null, "'And you want to destroy an ally of mine!' Øystein scornes.");
-                    JOptionPane.showMessageDialog(null, "'You should be on your way.'");
-                    quest = "Winter";
+                if (elementQ1 != null) {
+                    if (elementQ1.equalsIgnoreCase("I am looking for the crystal of time.")) {
+                        JOptionPane.showMessageDialog(null, "'You are rude to my soldier!' Øystein snaps.");
+                        JOptionPane.showMessageDialog(null, "I know where the crystal of time is\n" +
+                                "I will give you a map that will take you there even though I should not.");
+                        JOptionPane.showMessageDialog(null, "Øystein hands you a map, you put it in your satchel.");
+                        JOptionPane.showMessageDialog(null, "'The Crystal of Time is a powerful object you see.' Øystein says.");
+                        JOptionPane.showMessageDialog(null, "'Take care when using it.' Øystein says.");
+                        JOptionPane.showMessageDialog(null, "'You should be on your way take your dog.'");
+                        quest = "CrystalM";
+                    }
+                    else if (elementQ1.equalsIgnoreCase("I am looking to destroy the Winter Queen.")) {
+                        JOptionPane.showMessageDialog(null, "'You are rude to my soldier!' Øystein snaps.");
+                        JOptionPane.showMessageDialog(null, "'And you want to destroy an ally of mine!' Øystein scorned.");
+                        JOptionPane.showMessageDialog(null, "'You should be on your way, take your dog.'");
+                        quest = "Winter";
 
+                    }
                 }
             }
+
             else if (actof2.equalsIgnoreCase("Stand")) {
                 JOptionPane.showMessageDialog(null, "Standing in front of Øystein you wait for him to speak.");
 
                 if (elementQ.equalsIgnoreCase("I am looking for the crystal of time.")) {
                     JOptionPane.showMessageDialog(null, "'Insolent one you are!' Øystein sneers.");
                     JOptionPane.showMessageDialog(null, "'I am not going to help you for you cannot kneel' Øystein sneers again.");
-                    JOptionPane.showMessageDialog(null, "'You should be on your way.'");
+                    JOptionPane.showMessageDialog(null, "'You should be on your way, take your dog.'");
                     quest = "Crystal";
 
 
                 } else if (elementQ.equalsIgnoreCase("I am looking to destroy the Winter Queen.")) {
                     JOptionPane.showMessageDialog(null, "'Insolent one you are!' Øystein sneers.");
-                    JOptionPane.showMessageDialog(null, "'And you want to destroy an ally of mine!' Øystein scornes.");
-                    JOptionPane.showMessageDialog(null, "'You should be on your way fool.'");
+                    JOptionPane.showMessageDialog(null, "'And you want to destroy an ally of mine!' Øystein scorned.");
+                    JOptionPane.showMessageDialog(null, "'You should be on your way fool, take your dog.'");
                     quest = "Winter";
 
                 }
-                if (elementQ1.equalsIgnoreCase("I am looking for the crystal of time.")) {
-                    JOptionPane.showMessageDialog(null, "'Insolent one you are!' Øystein sneers.");
-                    JOptionPane.showMessageDialog(null, "'And you are rude to my soldier!' Øystein snaps.");
-                    JOptionPane.showMessageDialog(null, "'I am not going to help you for you cannot kneel' Øystein sneers again.");
-                    JOptionPane.showMessageDialog(null, "'You should be on your way.'");
-                    quest = "Crystal";
+
+                if (elementQ1 != null) {
+                    if (elementQ1.equalsIgnoreCase("I am looking for the crystal of time.")) {
+                        JOptionPane.showMessageDialog(null, "'Insolent one you are!' Øystein sneers.");
+                        JOptionPane.showMessageDialog(null, "'And you are rude to my soldier!' Øystein snaps.");
+                        JOptionPane.showMessageDialog(null, "'I am not going to help you for you cannot kneel' Øystein sneers again.");
+                        JOptionPane.showMessageDialog(null, "'You should be on your way, take your dog.'");
+                        quest = "Crystal";
 
 
-                } else if (elementQ1.equalsIgnoreCase("I am looking to destroy the Winter Queen.")) {
-                    JOptionPane.showMessageDialog(null, "'Insolent one you are!' Øystein sneers.");
-                    JOptionPane.showMessageDialog(null, "'You are rude to my soldier!' Øystein snaps.");
-                    JOptionPane.showMessageDialog(null, "'And you want to destroy an ally of mine!' Øystein scornes.");
-                    JOptionPane.showMessageDialog(null, "'You should be on your way fool.'");
-                    quest = "Winter";
+                    } else if (elementQ1.equalsIgnoreCase("I am looking to destroy the Winter Queen.")) {
+                        JOptionPane.showMessageDialog(null, "'Insolent one you are!' Øystein sneers.");
+                        JOptionPane.showMessageDialog(null, "'You are rude to my soldier!' Øystein snaps.");
+                        JOptionPane.showMessageDialog(null, "'And you want to destroy an ally of mine!' Øystein scornes.");
+                        JOptionPane.showMessageDialog(null, "'You should be on your way fool, take your dog.'");
+                        quest = "Winter";
 
+                    }
                 }
             }
 
-            if (quest.equalsIgnoreCase("Crystal")){
 
-            }
-            else if (quest.equalsIgnoreCase("Winter")){
+            if (quest != null) {
+                if (quest.equalsIgnoreCase("CrystalM")){
+                    JOptionPane.showMessageDialog(null, "A soldier takes you away, " + doggo + " follows.");
+                    JOptionPane.showMessageDialog(null, "Winding around the halls of the fortress the soldier takes you to the exit.");
+                    JOptionPane.showMessageDialog(null, "Finally the exit is shown and you walk out thanking the soldier.");
+                    JOptionPane.showMessageDialog(null, "You reenter the lively forest, looking around you are not sure where to go.");
+                    JOptionPane.showMessageDialog(null, "Taking a look at the map you see that\n" +
+                            "if you take the left trail you will be on the way.");
+                    JOptionPane.showMessageDialog(null, "Walking to the trail " + doggo + " wags her tail and follows");
+                    JOptionPane.showMessageDialog(null, "Walking you start to think about the quest at hand.");
+                    JOptionPane.showMessageDialog(null, "Thinking of the toils ahead you grip the staff and the " + weapon1 + " tight.");
+                    JOptionPane.showMessageDialog(null, "Hungry you sit and eat the bread the hermit gave you.");
+                    JOptionPane.showMessageDialog(null, "You share some bread with " + doggo + ". She eats it happily and licks her lips.");
+                    JOptionPane.showMessageDialog(null, "Getting up you feel ready to continue.");
+                    JOptionPane.showMessageDialog(null, "Walking further down the trail you see some flowers.");
 
+
+
+                }
+
+                else if (quest.equalsIgnoreCase("Winter")){
+                    JOptionPane.showMessageDialog(null, "winter quest.");
+
+                }
+                else if (quest.equalsIgnoreCase("Crystal")){
+                    JOptionPane.showMessageDialog(null, "crystal no map.");
+
+                }
             }
             System.exit(0);
 
