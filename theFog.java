@@ -837,15 +837,14 @@ public class theFog {
 
             String beer;
             do {
-                beer = (String) JOptionPane.showInputDialog(null,"Sitting on the side of the trail\n" +
+                beer = (String) JOptionPane.showInputDialog(null, "Sitting on the side of the trail\n" +
                         "you find an old camp along the road.\n" +
                         "Looking around you find 6 beers.\nHow many 0-6 do you want to drink?\n" +
-                        "or save them?","The Fog",JOptionPane.INFORMATION_MESSAGE,icon1,null,"");
+                        "or save them?", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
             }
 
             while (!beer.equalsIgnoreCase("0") && (!beer.equalsIgnoreCase("1") && (!beer.equalsIgnoreCase("2") && (!beer.equalsIgnoreCase("3")
-                        && (!beer.equalsIgnoreCase("4") && (!beer.equalsIgnoreCase("5") && (!beer.equalsIgnoreCase("6"))))))));
-
+                    && (!beer.equalsIgnoreCase("4") && (!beer.equalsIgnoreCase("5") && (!beer.equalsIgnoreCase("6"))))))));
 
 
             try {
@@ -932,6 +931,33 @@ public class theFog {
 
 
             int allcoins = ThreadLocalRandom.current().nextInt(70, 100 + 1);
+
+           if (beer.equalsIgnoreCase("0")){
+               JOptionPane.showMessageDialog(null, "You start walking down the long trail again.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+               JOptionPane.showMessageDialog(null, ".", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+           }
+
+
+            else if (beer.equalsIgnoreCase("1") && beer.equalsIgnoreCase("2")){
+                JOptionPane.showMessageDialog(null, "You start walking down the long trail again.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Feeling ", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            }
+
+            else if (beer.equalsIgnoreCase("3")) {
+                JOptionPane.showMessageDialog(null, "You start walking down the long trail again.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+            }
+
+            else if (beer.equalsIgnoreCase("4") || beer.equalsIgnoreCase("5")) {
+
+                JOptionPane.showMessageDialog(null, "You start walking down the long trail again.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+            }
+
+            else if (beer.equalsIgnoreCase("6")) {
+
+            }
+
             JOptionPane.showMessageDialog(null, "You start walking down the long trail again.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
             JOptionPane.showMessageDialog(null, "Heading along the sun is bright", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
@@ -956,7 +982,7 @@ public class theFog {
             JOptionPane.showMessageDialog(null, "You can kill the bunny with your " + weapon1 + ".", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             JOptionPane.showMessageDialog(null, "You will have the choice to attack the bunny, or hit enter to walk past.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             String bunnyKill1;
-            bunnyKill1 = (String) JOptionPane.showInputDialog(null,"Type kill to attack","The Fog",JOptionPane.INFORMATION_MESSAGE,icon1,null,"");
+            bunnyKill1 = (String) JOptionPane.showInputDialog(null, "Type kill to attack", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
             if (bunnyKill1.equalsIgnoreCase("Kill") && weapon1.equalsIgnoreCase("Axe")) {
                 JOptionPane.showMessageDialog(null, "Using the " + weapon1 + " you split that bunny in half along with the rock it was sitting on.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             } else if (bunnyKill1.equalsIgnoreCase("Kill") && weapon1.equalsIgnoreCase("Sword")) {
@@ -986,7 +1012,7 @@ public class theFog {
             JOptionPane.showMessageDialog(null, "You make it to the tavern in the center of town.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             JOptionPane.showMessageDialog(null, "If you are thirsty and want to buy a beer you can.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             String checkPocket1;
-            checkPocket1 = (String) JOptionPane.showInputDialog(null,"Type CHECK to check your pocket for those coins.","The Fog",JOptionPane.INFORMATION_MESSAGE,icon1,null,"");
+            checkPocket1 = (String) JOptionPane.showInputDialog(null, "Type CHECK to check your pocket for those coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
             if (checkPocket1.equalsIgnoreCase("check")) {
                 JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
@@ -995,12 +1021,10 @@ public class theFog {
             }
 
 
-
             String buyBeer0;
 
-            buyBeer0 = (String) JOptionPane.showInputDialog(null,"A beer is 3 coins.\n" +
-                    "Type BUY and chug it!","The Fog",JOptionPane.INFORMATION_MESSAGE,icon1,null,"");
-
+            buyBeer0 = (String) JOptionPane.showInputDialog(null, "A beer is 3 coins.\n" +
+                    "Type BUY and chug it!", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
 
 
             if (buyBeer0.equalsIgnoreCase("Buy")) {
@@ -1020,8 +1044,8 @@ public class theFog {
 
             if (buyBeer0.equalsIgnoreCase("Buy")) {
                 JOptionPane.showMessageDialog(null, "Do you wanna buy another beer?", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                buyBeer1 = (String) JOptionPane.showInputDialog(null,"Now buy a beer for 3 coins.\n" +
-                        "Type BUY and chug it!","The Fog",JOptionPane.INFORMATION_MESSAGE,icon1,null,"");
+                buyBeer1 = (String) JOptionPane.showInputDialog(null, "Now buy a beer for 3 coins.\n" +
+                        "Type BUY and chug it!", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
 
                 if (!buyBeer1.equalsIgnoreCase("Buy")) {
                     JOptionPane.showMessageDialog(null, "I guess you only wanted one beer.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
@@ -1037,7 +1061,6 @@ public class theFog {
                         "You take one look before\n" +
                         "You drink the whole thing in one GULP.\n" +
                         "You now have " + allcoins + " coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-
 
 
             }
@@ -1135,7 +1158,7 @@ public class theFog {
                 JOptionPane.showMessageDialog(null, "Shaking off the fight you take a deep breath.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             } else if (beer.equalsIgnoreCase("2") && (buyBeer0.equalsIgnoreCase("Buy") && (!buyBeer1.equalsIgnoreCase("Buy")))) {
                 JOptionPane.showMessageDialog(null, "A menacing man walks in the tavern.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                JOptionPane.showMessageDialog(null, "You watch him look at you.","The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "You watch him look at you.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
                 JOptionPane.showMessageDialog(null, "He pulls out a long knife.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
                 if (weapon1.equalsIgnoreCase("Axe")) {
                     JOptionPane.showMessageDialog(null, "You run and use the " + weapon1 + " to smash the knife from his hand.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
@@ -1244,7 +1267,7 @@ public class theFog {
                 JOptionPane.showMessageDialog(null, "Shaking off the fight you take a deep breath.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             }
             String buyfood1;
-            buyfood1 = (String) JOptionPane.showInputDialog(null,"You can now BUY bread for 3 coins","The Fog",JOptionPane.INFORMATION_MESSAGE,icon1,null,"");
+            buyfood1 = (String) JOptionPane.showInputDialog(null, "You can now BUY bread for 3 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
 
 
             if (buyfood1.equalsIgnoreCase("Buy")) {
@@ -1261,70 +1284,61 @@ public class theFog {
             int gamble1 = ThreadLocalRandom.current().nextInt(1, 3 + 1);
             int gamble2 = ThreadLocalRandom.current().nextInt(1, 3 + 1);
             String choice1;
-            choice1 = (String) JOptionPane.showInputDialog(null,"Pick 1-3 or hit enter","The Fog",JOptionPane.INFORMATION_MESSAGE,icon1,null,"");
+            choice1 = (String) JOptionPane.showInputDialog(null, "Pick 1-3 or hit enter", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
             String choice2;
-            JOptionPane.showMessageDialog(null, "The number was " + gamble1 + ".", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
-            if (gamble1 == (1) && choice1.equalsIgnoreCase("1")) {
-                allcoins = allcoins + 10;
-                JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            if (choice1.equalsIgnoreCase("1") && choice1.equalsIgnoreCase("2") && choice1.equalsIgnoreCase("3")) {
 
+                JOptionPane.showMessageDialog(null, "The number was " + gamble1 + ".", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+                if (gamble1 == (1) && choice1.equalsIgnoreCase("1")) {
+                    allcoins = allcoins + 10;
+                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+                } else if (gamble1 == (2) && choice1.equalsIgnoreCase("2")) {
+                    allcoins = allcoins + 10;
+                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                } else if (gamble1 == (3) && choice1.equalsIgnoreCase("3")) {
+                    allcoins = allcoins + 10;
+                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                } else {
+                    allcoins = allcoins - 5;
+                    JOptionPane.showMessageDialog(null, "You lost 5 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                }
+
+                choice2 = (String) JOptionPane.showInputDialog(null, "Again pick 1-3 or hit enter", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
+                JOptionPane.showMessageDialog(null, "The number was " + gamble2 + ".", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+                if (gamble2 == (1) && choice2.equalsIgnoreCase("1")) {
+                    allcoins = allcoins + 10;
+                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+                } else if (gamble2 == (2) && choice2.equalsIgnoreCase("2")) {
+                    allcoins = allcoins + 10;
+                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                } else if (gamble2 == (3) && choice2.equalsIgnoreCase("3")) {
+                    allcoins = allcoins + 10;
+                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                } else if (choice2.equalsIgnoreCase("")) {
+                    JOptionPane.showMessageDialog(null, "I guess you don't want to play again", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+                } else {
+                    allcoins = allcoins - 5;
+                    JOptionPane.showMessageDialog(null, "You lost 5 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+                }
             }
-            else if (gamble1 == (2) && choice1.equalsIgnoreCase("2")){
-                allcoins = allcoins + 10;
-                JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-            }
-
-            else if (gamble1 == (3) && choice1.equalsIgnoreCase("3")) {
-                allcoins = allcoins + 10;
-                JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-            }
-
-            else if (choice1.equalsIgnoreCase("")){
+         else if (choice1.equalsIgnoreCase("")) {
                 JOptionPane.showMessageDialog(null, "I guess you don't want to play", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             }
-            else {
-                allcoins = allcoins - 5;
-                JOptionPane.showMessageDialog(null, "You lost 5 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-            }
-
-            choice2 = (String) JOptionPane.showInputDialog(null,"Again pick 1-3 or hit enter","The Fog",JOptionPane.INFORMATION_MESSAGE,icon1,null,"");
-            JOptionPane.showMessageDialog(null, "The number was " + gamble2 + ".", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-
-            if (gamble2 == (1) && choice2.equalsIgnoreCase("1")) {
-                allcoins = allcoins + 10;
-                JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-
-            }
-            else if (gamble2 == (2) && choice2.equalsIgnoreCase("2")){
-                allcoins = allcoins + 10;
-                JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-            }
-
-            else if (gamble2 == (3) && choice2.equalsIgnoreCase("3")) {
-                allcoins = allcoins + 10;
-                JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-            }
-
-
-            else if (choice2.equalsIgnoreCase("")) {
-                JOptionPane.showMessageDialog(null, "I guess you don't want to play", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-
-            }
-            else  {
-                allcoins = allcoins - 5;
-                JOptionPane.showMessageDialog(null, "You lost 5 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-
-                    }
-
 
                 System.exit(0);
         }
