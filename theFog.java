@@ -196,16 +196,24 @@ public class theFog {
 
             JOptionPane.showMessageDialog(null, "You trudge into the swamp\n"
                     + "your feet are soaked to the bone.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "Farther, deeper you wade.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "Bugs scatter over the waters surface.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "Discovering a hut in the center of\n" +
+                    "the swamp, you trip on a branch.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             JOptionPane.showMessageDialog(null, "As you wade deeper and deeper\n" +
                     "you approach the hermits hut.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-            JOptionPane.showMessageDialog(null, "Discovering the hut in the center of\n" +
-                    "the swamp, you trip on a branch.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             JOptionPane.showMessageDialog(null, "Yelling out to the hut a voice answers you!", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             JOptionPane.showMessageDialog(null, "'Come to the door' the hermit calls to you.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             JOptionPane.showMessageDialog(null, "Knocking the mud off your boots you enter\n" +
                     "the hut at the hermits beckon.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "Entering the hut you take a seat at the hermits table.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "'Traveler you have many choices to make.' Say's the hermit.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "'Destroying the Winter Queen you will bring balance back to the habitat.\n This will restore the ecosystem of this region.'", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "'Or you can become more powerful than you can imagine obtaining the Crystal Of Time.\nIt is so powerful nothing can stand before your might.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "This quest will be your choice.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
             JOptionPane.showMessageDialog(null, "The hermit kindly offers you some bread and water.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-            JOptionPane.showMessageDialog(null, "The hermit fills your satchel with bread.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "Then the hermit fills your satchel with bread.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             JOptionPane.showMessageDialog(null, "You feel full and ready to take on the adventure.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
             String action1;
@@ -932,35 +940,65 @@ public class theFog {
 
             int allcoins = ThreadLocalRandom.current().nextInt(70, 100 + 1);
 
-           if (beer.equalsIgnoreCase("0")){
+            String clover;
+
+            if (beer.equalsIgnoreCase("0")){
                JOptionPane.showMessageDialog(null, "You start walking down the long trail again.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-               JOptionPane.showMessageDialog(null, ".", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-           }
+               JOptionPane.showMessageDialog(null, "Looking down at a patch of grass there are some clovers growing.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+               JOptionPane.showMessageDialog(null, "Right there in the patch is a four leaf clover.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+               do {
+                   clover = (String) JOptionPane.showInputDialog(null, "Pick up the CLOVER", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
+               }
+               while (!clover.equalsIgnoreCase("Clover"));
+
+                JOptionPane.showMessageDialog(null, "Putting the clover in your pocket you save it for good luck.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Following the trail you can't see any signs of civilization yet.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+
+            }
 
 
             else if (beer.equalsIgnoreCase("1") && beer.equalsIgnoreCase("2")){
                 JOptionPane.showMessageDialog(null, "You start walking down the long trail again.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                JOptionPane.showMessageDialog(null, "Feeling ", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Smelling some great flowers you pause for a minute.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "A bee buzzes past you on its way to new pastures.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "A stream nearby flows along the trail.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+
+
             }
 
             else if (beer.equalsIgnoreCase("3")) {
                 JOptionPane.showMessageDialog(null, "You start walking down the long trail again.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-
+                JOptionPane.showMessageDialog(null, "Feeling good you start making great time down the trail", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Hurrying along you step on an ant hill", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Taking off your shoe you empty it of ants", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Watching where you walk now you keep heading down the trail", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             }
 
             else if (beer.equalsIgnoreCase("4") || beer.equalsIgnoreCase("5")) {
-
                 JOptionPane.showMessageDialog(null, "You start walking down the long trail again.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Trying to follow the path you walk into the grass feeling drunk.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Maneuvering yourself back onto the trail you gather yourself.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "A black snake slithers in front of you, you almost step on it!", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Really trying to gather your senses you continue down the trail.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
             }
 
             else if (beer.equalsIgnoreCase("6")) {
+                JOptionPane.showMessageDialog(null, "You start stumbling down the road feeling quite drunk.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Walking through the grass you find a stream.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Leaning in to take a drink to sober up " + name + " falls in!", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Pulling yourself up out of the stream soaking wet.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Dripping wet you stagger down the trail.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
 
             }
 
-            JOptionPane.showMessageDialog(null, "You start walking down the long trail again.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "Some trees emerge along the trail you are heading into the forest.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
-            JOptionPane.showMessageDialog(null, "Heading along the sun is bright", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "Continuing on the sun is bright", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
             JOptionPane.showMessageDialog(null, "You see a slight shine in the dirt.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
@@ -1267,80 +1305,252 @@ public class theFog {
                 JOptionPane.showMessageDialog(null, "Shaking off the fight you take a deep breath.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
             }
             String buyfood1;
-            buyfood1 = (String) JOptionPane.showInputDialog(null, "You can now BUY bread for 3 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
+            buyfood1 = (String) JOptionPane.showInputDialog(null, "You can now BUY bread for 3 coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
 
 
             if (buyfood1.equalsIgnoreCase("Buy")) {
                 allcoins = allcoins - 3;
                 JOptionPane.showMessageDialog(null, "You chomp down on the bread.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                JOptionPane.showMessageDialog(null, "You now have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "You now have " + allcoins + " coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+            }
+            else if (!buyfood1.equalsIgnoreCase("Buy")){
+                JOptionPane.showMessageDialog(null, "I guess you didn't want any bread.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
             }
 
-            JOptionPane.showMessageDialog(null, name + " you see a group playing a game", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-            JOptionPane.showMessageDialog(null, "You can play with them and win 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-            JOptionPane.showMessageDialog(null, "Pick a number between 1-3", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, name + " you see a group playing a game.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "You can play with them and win 10 coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+            JOptionPane.showMessageDialog(null, "Pick a number between 1-3.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
             int gamble1 = ThreadLocalRandom.current().nextInt(1, 3 + 1);
             int gamble2 = ThreadLocalRandom.current().nextInt(1, 3 + 1);
             String choice1;
-            choice1 = (String) JOptionPane.showInputDialog(null, "Pick 1-3 or hit enter", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
+            choice1 = (String) JOptionPane.showInputDialog(null, "Pick 1-3 or hit enter.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
             String choice2;
 
-            if (choice1.equalsIgnoreCase("1") && choice1.equalsIgnoreCase("2") && choice1.equalsIgnoreCase("3")) {
+            if (choice1.equalsIgnoreCase("1") || choice1.equalsIgnoreCase("2") || choice1.equalsIgnoreCase("3")) {
 
                 JOptionPane.showMessageDialog(null, "The number was " + gamble1 + ".", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
                 if (gamble1 == (1) && choice1.equalsIgnoreCase("1")) {
                     allcoins = allcoins + 10;
-                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You won 10 coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
                 } else if (gamble1 == (2) && choice1.equalsIgnoreCase("2")) {
                     allcoins = allcoins + 10;
-                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You won 10 coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
                 } else if (gamble1 == (3) && choice1.equalsIgnoreCase("3")) {
                     allcoins = allcoins + 10;
-                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You won 10 coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
                 } else {
                     allcoins = allcoins - 5;
-                    JOptionPane.showMessageDialog(null, "You lost 5 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You lost 5 coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
                 }
 
-                choice2 = (String) JOptionPane.showInputDialog(null, "Again pick 1-3 or hit enter", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
+                choice2 = (String) JOptionPane.showInputDialog(null, "Again pick 1-3 or hit enter.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1, null, "");
                 JOptionPane.showMessageDialog(null, "The number was " + gamble2 + ".", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
                 if (gamble2 == (1) && choice2.equalsIgnoreCase("1")) {
                     allcoins = allcoins + 10;
-                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You won 10 coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
                 } else if (gamble2 == (2) && choice2.equalsIgnoreCase("2")) {
                     allcoins = allcoins + 10;
-                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You won 10 coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
                 } else if (gamble2 == (3) && choice2.equalsIgnoreCase("3")) {
                     allcoins = allcoins + 10;
-                    JOptionPane.showMessageDialog(null, "You won 10 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You won 10 coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
                 } else if (choice2.equalsIgnoreCase("")) {
-                    JOptionPane.showMessageDialog(null, "I guess you don't want to play again", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "I guess you don't want to play again.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
                 } else {
                     allcoins = allcoins - 5;
-                    JOptionPane.showMessageDialog(null, "You lost 5 coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You lost 5 coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                    JOptionPane.showMessageDialog(null, "You have " + allcoins + " coins.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
 
                 }
             }
-         else if (choice1.equalsIgnoreCase("")) {
-                JOptionPane.showMessageDialog(null, "I guess you don't want to play", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
-            }
+         else {
+             JOptionPane.showMessageDialog(null, "I guess you don't want to play.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+         }
 
-                System.exit(0);
+                JOptionPane.showMessageDialog(null, "Feeling like you've over stayed your welcome you leave the tavern.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Walking through town there are few people on the street.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Finding a hunters shack you enter interested.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Inside you find a man sharpening a large knife.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "'I got a fishing rod and a bow and arrow for sale.' Says the hunter.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "'They are for sale for 40 coins each' says the hunter.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                String hunt;
+                do {
+                    hunt = JOptionPane.showInputDialog("Do you want the BOW or the ROD");
+                }
+                while  (!hunt.equalsIgnoreCase("Bow") && !hunt.equalsIgnoreCase("Rod"));
+
+                if (hunt.equalsIgnoreCase("Bow")){
+                    allcoins = allcoins - 40;
+                    JOptionPane.showMessageDialog(null, "'Buying the bow you now have " + allcoins + " coins." , "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                }
+
+                else if (hunt.equalsIgnoreCase("Rod")){
+                allcoins = allcoins - 40;
+                JOptionPane.showMessageDialog(null, "'Buying the fishing rod you now have " + allcoins + " coins." , "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                }
+
+                JOptionPane.showMessageDialog(null, "Thanking the hunter you admire your purchase.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Making your way out of the shack you wave to the hunter.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Outside it is quiet in the streets.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "A woman holding food goods enters her home and locks the door.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Walking further you start getting to the outskirts of Deathfall.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Further you walk and now begin to enter the dense forest.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null,"Traveling though the forest there is a dense fog.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "You can barely see in front of you.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Wandering though the fog you feel your way though.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "The fog does not dissipate, you continue to feel your way though the forest.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Swearing you were just here you are lost and wondering.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, "Continuing on the fog finally starts to dissipate.", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+                JOptionPane.showMessageDialog(null, ".", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+
+
+            JOptionPane.showMessageDialog(null, "start boss fight", "The Fog", JOptionPane.INFORMATION_MESSAGE, icon1);
+
+
+
+                String death = "";
+                do {
+
+
+
+                    JOptionPane optionPane = new JOptionPane("Do you want to attack?",
+                            JOptionPane.QUESTION_MESSAGE,
+                            JOptionPane.YES_NO_OPTION);
+
+
+                    JDialog dialog = optionPane.createDialog("Select Yes");
+                    dialog.setDefaultCloseOperation(JDialog.HIDE_ON_CLOSE);
+
+                    Timer timer = new Timer(1000, e -> dialog.setVisible(false));
+                    timer.setRepeats(false);
+                    timer.start();
+
+                    dialog.setVisible(true);
+
+                    if (optionPane.getValue() instanceof Integer) {
+                        int option = (Integer) optionPane.getValue();
+
+                        if (option == JOptionPane.YES_OPTION) {
+                            JOptionPane.showMessageDialog(null, "You strike at the dragon");
+                            death = "alive";
+
+                        } else if (option == JOptionPane.NO_OPTION) {
+                            JOptionPane.showMessageDialog(null, "You get hit");
+                            death = "death";
+                        }
+                    }
+
+                    else {
+                        JOptionPane.showMessageDialog(null, "You got hit.");
+                        death = "death";
+                    }
+                }
+
+                while (!death.equalsIgnoreCase("alive"));
+
+
+
+                do {
+
+
+
+                    JOptionPane optionPane = new JOptionPane("Do you want to attack?",
+                            JOptionPane.QUESTION_MESSAGE,
+                            JOptionPane.YES_NO_OPTION);
+
+
+                    JDialog dialog = optionPane.createDialog("Select Yes");
+                    dialog.setDefaultCloseOperation(JDialog.HIDE_ON_CLOSE);
+
+                    Timer timer = new Timer(1000, e -> dialog.setVisible(false));
+                    timer.setRepeats(false);
+                    timer.start();
+
+                    dialog.setVisible(true);
+
+                    if (optionPane.getValue() instanceof Integer) {
+                        int option = (Integer) optionPane.getValue();
+
+                        if (option == JOptionPane.YES_OPTION) {
+                            JOptionPane.showMessageDialog(null, "You strike at the dragon");
+                            death = "alive";
+
+                        } else if (option == JOptionPane.NO_OPTION) {
+                            JOptionPane.showMessageDialog(null, "You get hit");
+                            death = "death";
+                        }
+                    }
+
+                    else {
+                        JOptionPane.showMessageDialog(null, "You got hit.");
+                        death = "death";
+                    }
+                }
+
+                while (!death.equalsIgnoreCase("alive"));
+
+
+
+                do {
+
+
+
+                    JOptionPane optionPane = new JOptionPane("Do you want to attack?",
+                            JOptionPane.QUESTION_MESSAGE,
+                            JOptionPane.YES_NO_OPTION);
+
+
+                    JDialog dialog = optionPane.createDialog("Select Yes");
+                    dialog.setDefaultCloseOperation(JDialog.HIDE_ON_CLOSE);
+
+                    Timer timer = new Timer(1000, e -> dialog.setVisible(false));
+                    timer.setRepeats(false);
+                    timer.start();
+
+                    dialog.setVisible(true);
+
+                    if (optionPane.getValue() instanceof Integer) {
+                        int option = (Integer) optionPane.getValue();
+
+                        if (option == JOptionPane.YES_OPTION) {
+                            JOptionPane.showMessageDialog(null, "You strike at the dragon");
+                            death = "alive";
+
+                        } else if (option == JOptionPane.NO_OPTION) {
+                            JOptionPane.showMessageDialog(null, "You get hit");
+                            death = "death";
+                        }
+                    }
+
+                    else {
+                        JOptionPane.showMessageDialog(null, "You got hit.");
+                        death = "death";
+                    }
+                }
+
+                while (!death.equalsIgnoreCase("alive"));
+
+
+                JOptionPane.showMessageDialog(null, "You defeated the dragon.");
+
+
+
         }
 
 
