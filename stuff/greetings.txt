@@ -1,0 +1,9 @@
+Greetings
+Hi
+Welcome
+Good_Day
+Good_Morning
+Good_Afternoon
+How_goes_it
+Whats_up
+Salutations

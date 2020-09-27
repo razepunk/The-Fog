@@ -1,0 +1,11 @@
+Stranger
+Character
+Warrior
+Leader
+Champion
+Hero
+Fighter
+Human
+Mortal
+Specimen
+Soul
